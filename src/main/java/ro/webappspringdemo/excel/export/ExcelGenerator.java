@@ -22,7 +22,6 @@ import java.util.Map;
 
 public class ExcelGenerator extends AbstractXlsxStreamingView {
 
-    //CONSTANTS
     public static final String EXPORT_LIST_NAME = "objects";
     public static final String EXPORT_CUSTOM_ATTRIBUTES = "ATTRIBUTES MAPPING";
     public static final String EXPORT_SMALL_SIZE_COLUMNS = "SMALL COLUMNS";
