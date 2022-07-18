@@ -153,9 +153,6 @@ public class Excel {
                             // add to final list after conversion of the map into the specified object (the object must be unique in list)
                             objects.add(objectT);
                         }
-//                        else {
-//                            throw new CustomException("Exista date cu identificatori identici in fisier!Verificati randul " + (row.getRowNum() + 1), HttpStatus.BAD_REQUEST);
-                        // }
                     } else {
                         objects.add(objectT);
                     }
@@ -206,9 +203,6 @@ public class Excel {
                             // add to final list after conversion of the map into the specified object (the object must be unique in list)
                             objects.add(objectT);
                         }
-//                        else {
-//                            throw new CustomException("Exista date cu identificatori identici in fisier!Verificati randul " + (row.getRowNum() + 1), HttpStatus.BAD_REQUEST);
-//                        }
                     } else {
                         objects.add(objectT);
                     }
@@ -254,7 +248,6 @@ public class Excel {
                 if (cell.getStringCellValue() != null && !cell.getStringCellValue().equals(EMPTY_STRING)) {
                     if (cell.getCellType() == CellType.STRING) {
                         String headerColumnValue = formatHeaderValue(cell.getStringCellValue());
-                        //UtilsHeader.checkHeaderPosition(objectType, headerColumnValue, (cell.getColumnIndex()));
                         header.put(headerColumnValue, cell.getColumnIndex());
                     } else {
                         throw new CustomException("Cap de tabel invalid! Valorile trebuie sa fie sir de caractere!", HttpStatus.INTERNAL_SERVER_ERROR);

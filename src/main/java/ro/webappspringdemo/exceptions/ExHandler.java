@@ -17,16 +17,4 @@ public class ExHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<ExceptionMessage> handleBnrHrException(CustomException ex) {
         return ResponseEntity.status(ex.getStatusCode()).body(new ExceptionMessage(ex.getExceptionMsg()));
     }
-
-    /**
-     * bad upload request
-     * ex: wrong request header
-     * @return custom response for multipart exception
-     */
-//    @ExceptionHandler(MultipartException.class)
-//    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
-//    @ResponseBody
-//    protected ResponseEntity<ExceptionMessage> handleGenericMultipartException(MultipartException e) {
-//        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ExceptionMessage("Probleme la procesarea cererii de incarcare!"));
-//    }
 }
